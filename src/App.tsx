@@ -27,7 +27,7 @@ export default function App() {
         <Todo
           title={todo.title}
           userId={todo.userId}
-          completed={todo.completed}
+          // // completed={todo.completed}
         />
       ))}
     </div>
