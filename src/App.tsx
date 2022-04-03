@@ -11,13 +11,12 @@ type TodoType = {
 };
 
 export default function App() {
-  const [todos, setTodos] = useState<any>([]);
+  const [todos, setTodos] = useState<Array<TodoType>>([]);
 
   const onClickFetchData = () => {
     axios
       .get<Array<TodoType>>("https://jsonplaceholder.typicode.com/todos")
       .then((res) => {
-        // res.data.map((todo) => todo.)
         setTodos(res.data);
       });
   };
@@ -25,7 +24,7 @@ export default function App() {
     <div className="App">
       <button onClick={onClickFetchData}>データ取得</button>
       {todos.map((todo) => (
-        <Todo title={todo.title} userid={todo.userid} />
+        <Todo title={todo.title} userid={todo.userId} />
       ))}
     </div>
   );
