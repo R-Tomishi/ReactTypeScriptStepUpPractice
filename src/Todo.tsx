@@ -8,5 +8,5 @@ export const Todo = (props: TodoType) => {
   const { title, userId, completed } = props;
   const completedMark = completed ? "[完]" : "[未]";
 
-  return <p>{`${completedMark}${title}(ユーザー:${userid})`}</p>;
+  return <p>{`${completedMark}${title}(ユーザー:${userId})`}</p>;
 };
